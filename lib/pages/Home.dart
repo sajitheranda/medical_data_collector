@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicalapp1/components/SliderImages.dart';
 import '../components/MYAppBar.dart';
 
 class Home extends StatelessWidget {
@@ -7,11 +8,14 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  MyAppBar("Medical Data Collector"),
+      appBar:  MyAppBar("Pre Mal"),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          //mainAxisAlignment: MainAxisAlignment.center,
+          padding: EdgeInsets.all(10.0),
           children: [
+            SliderImages().Getslider(),
+            SizedBox(height: 20,),
             Buttonshow(context,"Adding Patient",Icons.person,"/addData"),
             Buttonshow(context,"Showing Patients",Icons.people,"/showAllPatient"),
             // Buttonshow(context,"Collection Status",Icons.dashboard,"/collectionStatus"),

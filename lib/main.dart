@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:medicalapp1/components/ChartWithDataEntry.dart';
 import 'package:medicalapp1/pages/GeneratedGraph.dart';
+import 'package:medicalapp1/pages/LoginPage.dart';
 import 'package:medicalapp1/pages/ShowAllPatient.dart';
 import 'package:medicalapp1/pages/CollectionStatus.dart';
 import 'package:medicalapp1/pages/WeightHeightDataEntry.dart';
@@ -39,9 +40,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue.shade900),
         useMaterial3: true,
       ),
-      home: Home(),
-      initialRoute: "/home",
+      home: LoginPage(),
+      initialRoute: "/login",
       routes: {
+        "/login":(context) => LoginPage(),
         "/home": (context) => Home(),
         "/addData": (context) => AddData(),
         "/showAllPatient": (context) => ShowAllPatient(),

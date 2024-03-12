@@ -46,12 +46,14 @@ dependencies:
   flutter_image_compress: ^2.1.0
   http: ^1.2.0
   fl_chart: ^0.66.2
+  carousel_slider: ^4.2.1
+  logger: ^2.1.0
 
 flutter_launcher_icons:
   android: true
-  image_path: "assets/icons/icon1.jpg"
+  image_path: "assets/icons/iconnew.jpg"
   adaptive_icon_background: "#ffffff"
-  adaptive_icon_foreground: "assets/icons/forhead.png"
+  adaptive_icon_foreground: "assets/icons/forheadnew.png"
   min_sdk_android: 21
 
 
@@ -81,6 +83,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/icons/icon1.jpg
+    - assets/icons/iconnew.jpg
+    - assets/sliderImage/image1.jpg
+    - assets/sliderImage/image2.jpg
+    - assets/sliderImage/image3.jpg
+    - assets/sliderImage/image4.jpg
+    - assets/sliderImage/image5.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

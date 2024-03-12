@@ -19,18 +19,21 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           child: const CircleAvatar(
             radius: 15, // Adjust the radius as needed
-            backgroundImage: AssetImage('assets/icons/icon1.jpg'), // Replace with the path to your image
+            backgroundImage: AssetImage('assets/icons/iconnew.jpg'), // Replace with the path to your image
           ),
         ),
 
       ),
       title: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Text(
             topic,
             style: TextStyle(color: Appcolor.textWhite),
           ),
+          SizedBox(
+            width: 17,
+          )
 
         ]
       ),
