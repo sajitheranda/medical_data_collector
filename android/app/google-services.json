@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "39526709654",
+    "project_id": "medical-data-77e73",
+    "storage_bucket": "medical-data-77e73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39526709654:android:450e40aa07c953cf72c5b7",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBerKVNtgpT8fOSuqE9cjDtt0xYYZv1Jpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39526709654:android:0340a003daa53d2672c5b7",
+        "android_client_info": {
+          "package_name": "com.example.medicalapp1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBerKVNtgpT8fOSuqE9cjDtt0xYYZv1Jpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
