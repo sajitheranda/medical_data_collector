@@ -22,9 +22,9 @@ class CaloryDetails{
       return 0.0;
     }else{
       if(gender=="Male"){
-        netCalory= (60.9+ (22.7*age))*activity_level;
+        netCalory= (60.9+ (22.7*age))*activity_level-calory;
       }else{
-        netCalory= (55.6+(22.7*age))*activity_level;
+        netCalory= (55.6+(22.7*age))*activity_level-calory;
       }
       return netCalory;
     }

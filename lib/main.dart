@@ -6,6 +6,7 @@ import 'package:medicalapp1/pages/GeneratedGraph.dart';
 import 'package:medicalapp1/pages/LoginPage.dart';
 import 'package:medicalapp1/pages/ShowAllPatient.dart';
 import 'package:medicalapp1/pages/CollectionStatus.dart';
+import 'package:medicalapp1/pages/Website.dart';
 import 'package:medicalapp1/pages/WeightHeightDataEntry.dart';
 import 'firebase_options.dart';
 import 'pages/AddData.dart';
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
         "/collectionStatus": (context) => CollctionStatus(),
         "/weightHeightdDataEntry": (context) => WeightHeightDataEntry(WeightHeightData: []),
         "/generateGraph": (context) => GeneratedGraph([],"Male"),
+        "/webview":(context) => Website(),
       },
     );
   }

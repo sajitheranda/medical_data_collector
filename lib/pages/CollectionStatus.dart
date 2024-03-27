@@ -2,10 +2,15 @@ import 'dart:math';
 
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:medicalapp1/firebaseStore/GetPatient.dart';
+import 'package:medicalapp1/properties/Appcolor.dart';
 
+import '../charts/BarChartDraw.dart';
+import '../charts/PieChartDraw.dart';
 import '../components/AnimatedCountWidget.dart';
 import '../components/ChartWithDataEntry.dart';
 import '../components/MyAppBarHome.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class CollctionStatus extends StatefulWidget {
   const CollctionStatus({super.key});
@@ -15,126 +20,102 @@ class CollctionStatus extends StatefulWidget {
 }
 
 class _CollctionStatusState extends State<CollctionStatus> {
-  final List<FlSpot> dummyData1 = List.generate(8, (index) {
-    return FlSpot(index.toDouble(), index * Random().nextDouble());
-  });
+  GetPatient getPatient= GetPatient();
 
-  // This will be used to draw the orange line
-  final List<FlSpot> dummyData2 = List.generate(8, (index) {
-    return FlSpot(index.toDouble(), index * Random().nextDouble());
-  });
+  final chartColors = [
+    Colors.green,
+    Colors.red,
+    Colors.blue,
+    Colors.yellow[900],
+    Colors.purple,
+    Colors.orange[900],
+    Colors.teal,
+    Colors.indigo,
+  ];
 
-  // This will be used to draw the blue line
-  final List<FlSpot> dummyData3 = List.generate(8, (index) {
-    return FlSpot(index.toDouble(), index * Random().nextDouble());
-  });
+
+  Future<void> initiateData() async {
+    await getPatient.initiate();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBarHome("Collection Status"),
-      body: ListView(
-        children: [
-          AspectRatio(
-            aspectRatio: 1.5,
-            child: PieChart(
-              PieChartData(
-                sections: [
-                  PieChartSectionData(
-                    color: Colors.blue,
-                    value: 40,
-                    title: 'blue\n40%',
-                    radius: 50,
-                    titleStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: const Color(0xffffffff)),
-                  ),
-                  PieChartSectionData(
-                    color: Colors.red,
-                    value: 30,
-                    title: '30%',
-                    radius: 50,
-                    titleStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: const Color(0xffffffff)),
-                  ),
-                  PieChartSectionData(
-                    color: Colors.green,
-                    value: 20,
-                    title: 'green\n20%',
-                    radius: 50,
-                    titleStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: const Color(0xffffffff)),
-                  ),
-                  PieChartSectionData(
-                    color: Colors.yellow,
-                    value: 10,
-                    title: 'yello\n10%',
-                    radius: 50,
-                    titleStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: const Color(0xffffffff)),
-                  ),
-                ],
-                // borderData: FlBorderData(show: false),
-                // sectionsSpace: 0,
-                //centerSpaceRadius: 40, // Adjust center hole radius if needed
-
+      body: FutureBuilder<void>(
+        future: initiateData(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            // Show a loading indicator while fetching data
+            return Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    CircularProgressIndicator(),
+                    SizedBox(height:10.0),
+                    Text("Waiting",style: TextStyle(color: Appcolor.mainColor),)
+                  ]
               ),
-              //sectionsSpace: 0, // Adjust space between sections if needed
+            );
+          } else if (snapshot.hasError) {
+            // Handle errors
+            return Text('Error: ${snapshot.error}');
+          } else {
+            // Data is ready, build your UI
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: ListView(
+                children: [
+                  ShowCard("Toatal patients",getPatient.totalCountPatient.toString()),
+                  if (getPatient.totalCountPatient != 0 ) PieChartDraw("Gender Percentages",getPatient.genderCount) else Text(""),
+                  if (getPatient.totalCountPatient != 0 ) PieChartDraw("Area Type Percentages",getPatient.AreatypeList) else Text(""),
+                  if (getPatient.totalCountPatient != 0 ) BarChartDraw("Area Type Percentages",getPatient.AreatypeList) else Text(""),
+                  if (getPatient.totalCountPatient != 0 ) PieChartDraw("Guardian of house",getPatient.guardianList) else Text(""),
+                  if (getPatient.totalCountPatient != 0 ) BarChartDraw("Activity Status",getPatient.ActivityStatusList),
+                  if (getPatient.totalCountPatient != 0 ) BarChartDraw("Vehicle type",getPatient.VehicalTypeList),
 
-            ),
-          ),
-      Container(
-        padding: EdgeInsets.all(16.0),
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(10.0),
-        ),
+
+                  // Other widgets...
+                ],
+              ),
+            );
+          }
+        },
+      ),
+    );
+  }
+
+  Widget ShowCard(String title,String value){
+    return  Card(
+      color: Appcolor.mainColor,
+      margin: EdgeInsets.all(20.0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(20.0),
         child: Row(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment:MainAxisAlignment.center,
           children: [
-            Icon(Icons.star, color: Colors.yellow),
-            SizedBox(width: 8.0),
-            AnimatedCountWidget(count: 20),
-          ],
-        ),
-      ),
-          drawlinechart(),
-
-
-
-        ],
-      ),
-
-    );
-  }
-
-
-  Widget drawlinechart(){
-    return AspectRatio(
-      aspectRatio: 1.5,
-      child: LineChart(
-        LineChartData(
-          borderData: FlBorderData(show: false),
-          lineBarsData: [
-            // The red line
-            LineChartBarData(
-              spots: dummyData1,
-              isCurved: true,
-              barWidth: 3,
-              color: Colors.red,
+            Text(
+              "${title}  = ",
+              style: TextStyle(
+                color: Colors.yellow[800],
+                fontSize: 20.0,
+              ),
             ),
-            // The orange line
-            LineChartBarData(
-              spots: dummyData2,
-              isCurved: true,
-              barWidth: 3,
-              color: Colors.red,
+            Text(
+              value,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20.0,
+              ),
             ),
-            // The blue line
-            LineChartBarData(
-              spots: dummyData3,
-              isCurved: false,
-              barWidth: 3,
-              color: Colors.blue,
-            )
           ],
         ),
       ),
     );
+
   }
+
 }

@@ -93,6 +93,7 @@ class _ShowAllPatientState extends State<ShowAllPatient> {
                 itemCount: snapshot.data?.length,
                 itemBuilder: (context, index) {
                   final DocumentSnapshot? document = snapshot.data?[index];
+                  //print("id = "+document!.id.toString());
                   return  Card( // Wrapping the ListTile with a Card to add background color and border
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0), // Adjust the value as needed for the roundness
@@ -124,8 +125,8 @@ class _ShowAllPatientState extends State<ShowAllPatient> {
                         backgroundColor: Colors.blue[600], // Change the color of the CircleAvatar as needed
                         child: Icon(Icons.person, color: Colors.white), // Change the icon color as needed
                       ),
-                      title: Text(snapshot.data?[index]["name"] as String, style: TextStyle(color: Colors.blue[900]),),
-                      subtitle: Text(snapshot.data?[index]["contact_number"] as String),
+                      title: Text(safeExtractString(snapshot.data?[index],"name"), style: TextStyle(color: Colors.blue[900]),),
+                      subtitle: Text(safeExtractString(snapshot.data?[index],"contact_number")),//safeExtractString(snapshot.data?[index],"contact_number") //snapshot.data?[index]["contact_number"] as String)
                     ),
                   );
                 },
@@ -144,6 +145,15 @@ class _ShowAllPatientState extends State<ShowAllPatient> {
       ),
 
     );
+  }
+
+  String safeExtractString(dynamic data, String key) {
+    try {
+      return data?[key] as String;
+    } catch (e) {
+      print("Error fetching $key: $e");
+      return "";
+    }
   }
 
   ImageProvider<Object>? getProfileimage(curruntdata){

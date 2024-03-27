@@ -142,6 +142,7 @@ class _EditDataState extends State<EditData> {
                   Map<String, TextEditingController> mergedControllers = {};
                   mergedControllers.addAll(childDetailController.childdetail_controller);
                   mergedControllers.addAll(familyStatusController.famlystatus_controller);
+                  mergedControllers.addAll(nutritionController.nutrition_controller);
 
                   await savePatient.SaveFirebaseTextController(mergedControllers);
                   await savePatient.AddWeightHeight(nutritionController.weightheightData);

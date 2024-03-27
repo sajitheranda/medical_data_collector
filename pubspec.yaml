@@ -48,6 +48,13 @@ dependencies:
   fl_chart: ^0.66.2
   carousel_slider: ^4.2.1
   logger: ^2.1.0
+  webview_flutter: ^4.7.0
+  flutter_widget_from_html: ^0.14.11
+  pdf: ^3.10.8
+  printing: ^5.12.0
+  syncfusion_flutter_xlsio: ^25.1.37
+  open_file_plus: ^3.4.1
+  share_plus: ^7.2.2
 
 flutter_launcher_icons:
   android: true
