@@ -91,22 +91,7 @@ class PdfGeneration{
       InvoiceItem(name: "Item 3", quantity: 1, price: 20.0),
       InvoiceItem(name: "Item 1", quantity: 2, price: 10.0),
       InvoiceItem(name: "Item 2", quantity: 3, price: 15.0),
-      InvoiceItem(name: "Item 3", quantity: 1, price: 20.0),
-      InvoiceItem(name: "Item 1", quantity: 2, price: 10.0),
-      InvoiceItem(name: "Item 2", quantity: 3, price: 15.0),
-      InvoiceItem(name: "Item 3", quantity: 1, price: 20.0),
-      InvoiceItem(name: "Item 1", quantity: 2, price: 10.0),
-      InvoiceItem(name: "Item 2", quantity: 3, price: 15.0),
-      InvoiceItem(name: "Item 3", quantity: 1, price: 20.0),
-      InvoiceItem(name: "Item 1", quantity: 2, price: 10.0),
-      InvoiceItem(name: "Item 2", quantity: 3, price: 15.0),
-      InvoiceItem(name: "Item 3", quantity: 1, price: 20.0),
-      InvoiceItem(name: "Item 1", quantity: 2, price: 10.0),
-      InvoiceItem(name: "Item 2", quantity: 3, price: 15.0),
-      InvoiceItem(name: "Item 3", quantity: 1, price: 20.0),
-      InvoiceItem(name: "Item 1", quantity: 2, price: 10.0),
-      InvoiceItem(name: "Item 2", quantity: 3, price: 15.0),
-      InvoiceItem(name: "Item 3", quantity: 1, price: 20.0),
+
     ];
 
     // Add one page with centered text "Hello World"

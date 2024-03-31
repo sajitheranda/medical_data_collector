@@ -28,6 +28,7 @@ class MyAppBarHome extends StatelessWidget implements PreferredSizeWidget  {
           ]
       ),
       backgroundColor: Appcolor.mainColor,
+
     );
   }
 

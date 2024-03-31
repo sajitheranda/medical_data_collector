@@ -56,7 +56,7 @@ class _ShowDataState extends State<ShowData> {
   late String birthHeight ;
   late String currentWeight ;
   late String currentHeight ;
-  late String caloryPerDay;
+  late String caloriePerDay;
   late String activityStatus;
 
 
@@ -96,6 +96,18 @@ class _ShowDataState extends State<ShowData> {
       }
     }catch(e){
       return 'no data';
+    }
+  }
+
+  String getValueYesNo(String name){
+    try {
+      if(widget.document?[name] == "1"){
+        return  "yes";
+      }else{
+        return 'no';
+      }
+    }catch(e){
+      return 'no';
     }
   }
 
@@ -144,7 +156,7 @@ class _ShowDataState extends State<ShowData> {
     address = getValue(PatientData.address);
     ethincity = getValue(PatientData.ethincity);
     relationship = getValue(PatientData.relationship);
-    schoolgoing = getValue(PatientData.schoolgoing);
+    schoolgoing = getValueYesNo(PatientData.schoolgoing);
     areatype = getValue(PatientData.areatype);
     gender = getValue(PatientData.gender);
 
@@ -159,13 +171,13 @@ class _ShowDataState extends State<ShowData> {
     expense =  getValue(PatientData.expense);
     homeCondition =  getValue(PatientData.homeCondition);
     vehicleType =  getValue(PatientData.vehicleType);
-    smartphoneUsing = getValue(PatientData.smartphoneUsing);
+    smartphoneUsing = getValueYesNo(PatientData.smartphoneUsing);
 
     birthWeight = getValue(PatientData.birthWeight);
     birthHeight = getValue(PatientData.birthHeight);
     currentWeight = getValue(PatientData.currentWeight);
     currentHeight = getValue(PatientData.currentHeight);
-    caloryPerDay = getValue(PatientData.caloriePerDay);
+    caloriePerDay = getValue(PatientData.caloriePerDay);
     activityStatus = getValue(PatientData.activityStatus);
 
   }
@@ -218,12 +230,12 @@ class _ShowDataState extends State<ShowData> {
           showItem("Birth height",birthHeight),
           showItem("Current weight",currentWeight),
           showItem("Current height",currentHeight),
-          showItem("Calory per day",caloryPerDay),
+          showItem("Calory per day",caloriePerDay),
           showItem("activity status",activityStatus),
 
           CaloryDetails.GetNetCaloryWidget(
               dateOfBirth,
-              caloryPerDay,
+              caloriePerDay,
               gender,
               activityStatus
           ),
