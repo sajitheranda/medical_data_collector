@@ -4,10 +4,15 @@ import 'package:medicalapp1/attribute/PatientData.dart';
 import 'package:medicalapp1/firebaseStore/SavePatient.dart';
 import 'package:medicalapp1/pages/GeneratedGraph.dart';
 import 'package:medicalapp1/pages/WeightHeightDataEntry.dart';
+import 'package:pdf/pdf.dart';
+import 'package:printing/printing.dart';
 import '../class/CaloryDetails.dart';
+import '../class/Child.dart';
 import '../class/WeightHeight.dart';
 import '../components/MyAppBarBack.dart';
+import '../generateDocuments/PdfGeneration.dart';
 import '../local/LocalImageSave.dart';
+import '../properties/Appcolor.dart';
 import 'EditData.dart';
 
 class ShowData extends StatefulWidget {
@@ -28,88 +33,10 @@ class ShowData extends StatefulWidget {
 class _ShowDataState extends State<ShowData> {
 
   late String documentId;
-  late String name ;
-  late String contactNumber ;
-  late String dateOfBirth ;
-  late String address ;
-  late String ethincity;
-  late String relationship;
-  late String schoolgoing ;
-  late String areatype ;
-  late String gender;
-
-  //family status
-  late String personsInHome ;
-  late String guardian ;
-  late String maritalState ;
-  late String children ;
-  late String headOfHouse ;
-  late String numMembersOverseas ;
-  late String numMembersEarning ;
-  late String income ;
-  late String expense ;
-  late String homeCondition ;
-  late String vehicleType ;
-  late String smartphoneUsing;
-
-  late String birthWeight;
-  late String birthHeight ;
-  late String currentWeight ;
-  late String currentHeight ;
-  late String caloriePerDay;
-  late String activityStatus;
-
-
-
   late String profileImage;
-
   LocalImageSave localImageSave = LocalImageSave();
+  late Child child;
 
-  // static String name = "name" ;
-  // static String contactNumber = "contact_number";
-  // static String dateOfBirth = "dateOfBirth";
-  // static String address = "address";
-  // static String ethincity = "ethincity";
-  // static String relationship = "relationship";
-  // static String schoolgoing = "schoolgoing";
-  // static String areatype = "areatype";
-  //
-  // //family status
-  // static String personsInHome = "persons_in_home";
-  // static String guardian = "guardian";
-  // static String maritalState = "marital_state";
-  // static String children = "children";
-  // static String headOfHouse = "head_of_house";
-  // static String numMembersOverseas = "num_members_overseas";
-  // static String numMembersEarning = "num_members_earning";
-  // static String income = "income";
-  // static String expense = "expense";
-  // static String homeCondition = "home_condition";
-  // static String vehicleType = "vehicle_type";
-  // static String smartphoneUsing = "smartphone_using";
-  String getValue(String name){
-    try {
-      if(widget.document?[name] != ""){
-        return  widget.document?[name];
-      }else{
-        return 'no data';
-      }
-    }catch(e){
-      return 'no data';
-    }
-  }
-
-  String getValueYesNo(String name){
-    try {
-      if(widget.document?[name] == "1"){
-        return  "yes";
-      }else{
-        return 'no';
-      }
-    }catch(e){
-      return 'no';
-    }
-  }
 
   SavePatient savePatient= SavePatient();
 
@@ -120,27 +47,6 @@ class _ShowDataState extends State<ShowData> {
       height: 200,
       fit: BoxFit.cover,
     );
-    // try{
-    //   localImageSave.initiate();
-    //   //print(curruntdata["profileImage_name"]);
-    //   //return FileImage(File("jdnc"));
-    //   FileImage image= localImageSave.loadImage(imageUrl);
-    //   //print(image.toString());
-    //   return Image(
-    //     image: image,
-    //     width: 200,
-    //     height: 200,
-    //     fit: BoxFit.cover,
-    //   );
-    // }catch(e){
-    //   print(e);
-    //   return  Image.network(
-    //     imageUrl,
-    //     width: 200,
-    //     height: 200,
-    //     fit: BoxFit.cover,
-    //   );
-    // }
 
   }
 
@@ -150,35 +56,9 @@ class _ShowDataState extends State<ShowData> {
     // Check if widget.document is not null, then access its id property
     documentId = widget.document?.id ?? '';
     profileImage = widget.document?["profileImage"]??"";
-    name =getValue(PatientData.name);
-    contactNumber = getValue(PatientData.contactNumber);
-    dateOfBirth = getValue(PatientData.dateOfBirth);
-    address = getValue(PatientData.address);
-    ethincity = getValue(PatientData.ethincity);
-    relationship = getValue(PatientData.relationship);
-    schoolgoing = getValueYesNo(PatientData.schoolgoing);
-    areatype = getValue(PatientData.areatype);
-    gender = getValue(PatientData.gender);
 
-    personsInHome = getValue(PatientData.personsInHome);
-    guardian = getValue(PatientData.guardian);
-    maritalState = getValue(PatientData.maritalState);
-    children = getValue(PatientData.children);
-    headOfHouse = getValue(PatientData.headOfHouse);
-    numMembersOverseas = getValue(PatientData.numMembersOverseas);
-    numMembersEarning =  getValue(PatientData.numMembersEarning);
-    income =  getValue(PatientData.income);
-    expense =  getValue(PatientData.expense);
-    homeCondition =  getValue(PatientData.homeCondition);
-    vehicleType =  getValue(PatientData.vehicleType);
-    smartphoneUsing = getValueYesNo(PatientData.smartphoneUsing);
+    child= Child(widget.document);
 
-    birthWeight = getValue(PatientData.birthWeight);
-    birthHeight = getValue(PatientData.birthHeight);
-    currentWeight = getValue(PatientData.currentWeight);
-    currentHeight = getValue(PatientData.currentHeight);
-    caloriePerDay = getValue(PatientData.caloriePerDay);
-    activityStatus = getValue(PatientData.activityStatus);
 
   }
 
@@ -186,7 +66,42 @@ class _ShowDataState extends State<ShowData> {
   Widget build(BuildContext context) {
     print("length= "+widget.weightheightData.length.toString());
     return Scaffold(
-      appBar: MyAppBarBack("Patient Details"),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_rounded,
+            color: Appcolor.textWhite,
+          ),
+          onPressed:(){
+            Navigator.pop(context);
+          },
+        ),
+        actions: [
+          IconButton(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+              onPressed: (){
+                Printing.layoutPdf(
+                  // [onLayout] will be called multiple times
+                  // when the user changes the printer or printer settings
+                  onLayout: (PdfPageFormat format) {
+                    // Any valid Pdf document can be returned here as a list of int
+                    return PdfGeneration().createPdfOneChildNew(format,widget.document,widget.weightheightData);
+                  },
+                );
+              },
+              icon: Icon(Icons.picture_as_pdf_rounded, color: Colors.white,))
+        ],
+        title: Row(
+            children: <Widget>[
+              Text(
+                "Child Deatails",
+                style: TextStyle(color: Appcolor.textWhite),
+              ),
+
+            ]
+        ),
+        backgroundColor: Appcolor.mainColor,
+      ),
       body: ListView(
         children: [
           SizedBox(height: 20.0),
@@ -203,41 +118,44 @@ class _ShowDataState extends State<ShowData> {
             radius: 100, // Change the radius to your desired size
           ),
           SizedBox(height: 20.0),
-          showItem("Name",name),
-          showItem("Contact number",contactNumber),
-          showItem("Date of birth",dateOfBirth),
-          showItem("Address",address),
-          showItem("ethincity",ethincity),
-          showItem("Relationship",relationship),
-          showItem("School going",schoolgoing),
-          showItem("Area type",areatype),
-          showItem("Gender",gender),
+          // showItem("Name",name),
+          // showItem("Contact number",contactNumber),
+          // showItem("Date of birth",dateOfBirth),
+          // showItem("Address",address),
+          // showItem("ethincity",ethincity),
+          // showItem("Relationship",relationship),
+          // showItem("School going",schoolgoing),
+          // showItem("Area type",areatype),
+          // showItem("Gender",gender),
+          //
+          // showItem("Persons in home",personsInHome),
+          // showItem("Guardian",guardian),
+          // showItem("Marital State",maritalState),
+          // showItem("Number of children",children),
+          // showItem("Head of house",headOfHouse),
+          // showItem("Number of members overseas",numMembersOverseas),
+          // showItem("Number of members overseas",numMembersEarning),
+          // showItem("Income",income),
+          // showItem("Expense",expense),
+          // showItem("Home condition",homeCondition),
+          // showItem("Vechical type",vehicleType),
+          // showItem("Smart phone using",smartphoneUsing),
+          //
+          // showItem("Birth weight",birthWeight),
+          // showItem("Birth height",birthHeight),
+          // showItem("Current weight",currentWeight),
+          // showItem("Current height",currentHeight),
+          // showItem("Calory per day",caloriePerDay),
+          // showItem("activity status",activityStatus),
 
-          showItem("Persons in home",personsInHome),
-          showItem("Guardian",guardian),
-          showItem("Marital State",maritalState),
-          showItem("Number of children",children),
-          showItem("Head of house",headOfHouse),
-          showItem("Number of members overseas",numMembersOverseas),
-          showItem("Number of members overseas",numMembersEarning),
-          showItem("Income",income),
-          showItem("Expense",expense),
-          showItem("Home condition",homeCondition),
-          showItem("Vechical type",vehicleType),
-          showItem("Smart phone using",smartphoneUsing),
-
-          showItem("Birth weight",birthWeight),
-          showItem("Birth height",birthHeight),
-          showItem("Current weight",currentWeight),
-          showItem("Current height",currentHeight),
-          showItem("Calory per day",caloriePerDay),
-          showItem("activity status",activityStatus),
+          for (int i = 0; i < PatientData.childWording.length; i++)
+            showItem(PatientData.childWording[i],child.dataAll()[i]),
 
           CaloryDetails.GetNetCaloryWidget(
-              dateOfBirth,
-              caloriePerDay,
-              gender,
-              activityStatus
+              child.dateOfBirth,
+              child.caloriePerDay,
+              child.gender,
+              child.activityStatus
           ),
 
           SizedBox(height: 20.0),
@@ -252,7 +170,7 @@ class _ShowDataState extends State<ShowData> {
                   MaterialPageRoute(
                     builder: (context) => GeneratedGraph(
                         widget.weightheightData,
-                        gender
+                        child.gender
                     ),
                   ),
                 );
@@ -279,7 +197,7 @@ class _ShowDataState extends State<ShowData> {
             children: [
               ElevatedButton(
                 onPressed: (){
-                  openDialog(savePatient,context,name,documentId);
+                  openDialog(savePatient,context,child.name,documentId);
                 },
                 style: ButtonStyle(
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(

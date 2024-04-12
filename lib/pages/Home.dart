@@ -19,7 +19,7 @@ class Home extends StatelessWidget {
             Buttonshow(context,"Adding Patient",Icons.person,"/addData"),
             Buttonshow(context,"Showing Patients",Icons.people,"/showAllPatient"),
             Buttonshow(context,"Collection Status",Icons.dashboard,"/collectionStatus"),
-            Buttonshow(context,"Webview",Icons.dashboard,"/webview"),
+            //Buttonshow(context,"Webview",Icons.dashboard,"/webview"),
             // Buttonshow(context,"weight height",Icons.dashboard,"/generateGraph"),
           ],
         ),

@@ -10,7 +10,6 @@ import '../charts/PieChartDraw.dart';
 import '../components/AnimatedCountWidget.dart';
 import '../components/ChartWithDataEntry.dart';
 import '../components/MyAppBarHome.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
 class CollctionStatus extends StatefulWidget {
   const CollctionStatus({super.key});

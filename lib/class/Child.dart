@@ -43,6 +43,9 @@ class Child{
   String height = "";
   String month = "";
   String weightHeightForMonth = "";
+  String heightForAge = "";
+  String weightForAge = "";
+  String weightForHeight = "";
 
   String _getValue(String name) {
       try {
@@ -100,40 +103,157 @@ class Child{
     currentHeight = _getValue(PatientData.currentHeight);
     caloriePerDay = _getValue(PatientData.caloriePerDay);
     activityStatus = _getValue(PatientData.activityStatus);
+    heightForAge = _getValue(PatientData.heightForAge);
+    weightForAge = _getValue(PatientData.weightForAge);
+    weightForHeight = _getValue(PatientData.weightForHeight);
+
 
   }
 
-  List<String> dataAll(){
+  List<String> dataAll() {
     return [
-    name,
-    contactNumber,
-    dateOfBirth,
-    address,
-    ethincity ,
-    relationship,
-    schoolgoing ,
-    areatype ,
-    gender ,
+      name,
+      contactNumber,
+      dateOfBirth,
+      address,
+      ethincity,
+      relationship,
+      schoolgoing,
+      areatype,
+      gender,
 
-    personsInHome,
-    guardian ,
-    maritalState,
-    children ,
-    headOfHouse,
-    numMembersOverseas ,
-    numMembersEarning,
-    income ,
-    expense ,
-    homeCondition ,
-    vehicleType ,
-    smartphoneUsing,
+      personsInHome,
+      guardian,
+      maritalState,
+      children,
+      headOfHouse,
+      numMembersOverseas,
+      numMembersEarning,
+      income,
+      expense,
+      homeCondition,
+      vehicleType,
+      smartphoneUsing,
 
-    birthWeight,
-    birthHeight,
-    currentWeight,
-    currentHeight,
-    caloriePerDay,
-    activityStatus
+      birthWeight,
+      birthHeight,
+      currentWeight,
+      currentHeight,
+      caloriePerDay,
+      activityStatus,
+      heightForAge,
+      weightForAge,
+      weightForHeight
+    ];
+    }
+
+  List<String> dataAllOneChildPDF() {
+    return [
+      name,
+      //contactNumber,
+      dateOfBirth,
+      //address,
+      ethincity,
+      relationship,
+      schoolgoing,
+      areatype,
+      gender,
+
+      personsInHome,
+      guardian,
+      maritalState,
+      children,
+      headOfHouse,
+      numMembersOverseas,
+      numMembersEarning,
+      income,
+      expense,
+      homeCondition,
+      vehicleType,
+      smartphoneUsing,
+
+      birthWeight,
+      birthHeight,
+      currentWeight,
+      currentHeight,
+      caloriePerDay,
+      activityStatus,
+      heightForAge,
+      weightForAge,
+      weightForHeight
+    ];
+  }
+
+    List<String> dataAllWithioutArea(){
+      return [
+        name,
+        contactNumber,
+        dateOfBirth,
+        address,
+        ethincity ,
+        relationship,
+        schoolgoing ,
+        gender ,
+
+        personsInHome,
+        guardian ,
+        maritalState,
+        children ,
+        headOfHouse,
+        numMembersOverseas ,
+        numMembersEarning,
+        income ,
+        expense ,
+        homeCondition ,
+        vehicleType ,
+        smartphoneUsing,
+
+        birthWeight,
+        birthHeight,
+        currentWeight,
+        currentHeight,
+        caloriePerDay,
+        activityStatus,
+        heightForAge,
+        weightForAge,
+        weightForHeight
+      ];
+
+    }
+
+  List<String> dataAllPdf(){
+    return [
+      name,
+      //contactNumber,
+      //dateOfBirth,
+      //address,
+      //ethincity ,
+      //relationship,
+      //schoolgoing ,
+      areatype,
+      gender ,
+      currentWeight,
+      currentHeight,
+      caloriePerDay,
+      activityStatus
+    ];
+
+  }
+
+  List<String> dataAllPdfWithoutArea(){
+    return [
+      name,
+      //contactNumber,
+      //dateOfBirth,
+      //address,
+      //ethincity ,
+      //relationship,
+      //schoolgoing ,
+      gender ,
+      currentWeight,
+      currentHeight,
+      caloriePerDay,
+      activityStatus
     ];
 
   }

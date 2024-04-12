@@ -16,7 +16,10 @@ class NutritionController{
     PatientData.currentWeight,
     PatientData.currentHeight,
     PatientData.caloriePerDay,
-    PatientData.activityStatus
+    PatientData.activityStatus,
+    PatientData.heightForAge,
+    PatientData.weightForAge,
+    PatientData.weightForHeight
 
   ];
 
@@ -28,6 +31,9 @@ class NutritionController{
       PatientData.currentHeight : TextEditingController(),
       PatientData.caloriePerDay : TextEditingController(),
       PatientData.activityStatus : TextEditingController(text:''),
+      PatientData.heightForAge : TextEditingController(text:''),
+      PatientData.weightForAge : TextEditingController(text:''),
+      PatientData.weightForHeight : TextEditingController(text:'')
     };
 
   }
@@ -205,6 +211,89 @@ class NutritionController{
               },
             ),
             SizedBox(height: 20),
+
+            DropdownButtonFormField(
+              value : nutrition_controller[PatientData.heightForAge]?.text??'',
+              onChanged: (newValue) {
+                // Update the state when the value changes
+                nutrition_controller[PatientData.heightForAge]?.text = newValue.toString();
+              },
+              items: [
+                getDropDownItem("","select"),
+                getDropDownItem("SLH","SLH"),
+                getDropDownItem("MLH","MLH"),
+                getDropDownItem("RLH","RLH"),
+                getDropDownItem("NH","NH"),
+                // Add more items as needed
+              ],
+              decoration: InputDecoration(
+                labelText: PatientData.heightForAgeWord,
+                // You can add more styling here if needed
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty ||value == '') {
+                  return 'Please select the height for age';
+                }
+                return null;
+              },
+            ),
+            SizedBox(height: 20),
+
+            DropdownButtonFormField(
+              value : nutrition_controller[PatientData.weightForAge]?.text??'',
+              onChanged: (newValue) {
+                // Update the state when the value changes
+                nutrition_controller[PatientData.weightForAge]?.text = newValue.toString();
+              },
+              items: [
+                getDropDownItem("","select"),
+                getDropDownItem("SLW","SLW"),
+                getDropDownItem("MLW","MLW"),
+                getDropDownItem("RLW","RLW"),
+                getDropDownItem("NW","NW"),
+                getDropDownItem("OW","OW"),
+                // Add more items as needed
+              ],
+              decoration: InputDecoration(
+                labelText: PatientData.weightForAgeWord,
+                // You can add more styling here if needed
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty ||value == '') {
+                  return 'Please select the weight for age';
+                }
+                return null;
+              },
+            ),
+            SizedBox(height: 20),
+
+            DropdownButtonFormField(
+              value : nutrition_controller[PatientData.weightForHeight]?.text??'',
+              onChanged: (newValue) {
+                // Update the state when the value changes
+                nutrition_controller[PatientData.weightForHeight]?.text = newValue.toString();
+              },
+              items: [
+                getDropDownItem("","select"),
+                getDropDownItem("SAM","SAM"),
+                getDropDownItem("MAM","MAM"),
+                getDropDownItem("NW","NW"),
+                getDropDownItem("OW","OW"),
+                // Add more items as needed
+              ],
+              decoration: InputDecoration(
+                labelText: PatientData.weightForHeightWord,
+                // You can add more styling here if needed
+              ),
+              validator: (value) {
+                if (value == null || value.isEmpty ||value == '') {
+                  return 'Please select the Weight for Height';
+                }
+                return null;
+              },
+            ),
+            SizedBox(height: 20),
+
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Appcolor.mainColor, // Set the background color here

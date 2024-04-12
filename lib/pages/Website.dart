@@ -7,7 +7,6 @@ import 'package:open_file_plus/open_file_plus.dart';
 import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
 import '../generateDocuments/ExcelGeneration.dart';
 
@@ -19,35 +18,7 @@ class Website extends StatefulWidget {
 }
 
 class _WebsiteState extends State<Website> {
-  WebViewController controller = WebViewController()
-    ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    ..setBackgroundColor(const Color(0x00000000))
-    ..setNavigationDelegate(
-      NavigationDelegate(
-        onProgress: (int progress) {
-          const Center(
-            child: CircularProgressIndicator(),
-          );
-        },
-        onPageStarted: (String url) {},
-        onPageFinished: (String url) {},
-        onWebResourceError: (WebResourceError error) {},
-        // onNavigationRequest: (NavigationRequest request) {
-        //   if (request.url.startsWith('https://www.youtube.com/')) {
-        //     return NavigationDecision.prevent;
-        //   }
-        //   return NavigationDecision.navigate;
-        // },
-      ),
-    )
-    ..loadRequest(Uri.parse('https://zendchat-1.onrender.com/'));
 
-  Future<void> printInvoicePdf() async {
-    final pdf = await PdfGeneration().generateInvoicePdf();  // Replace with your actual list of items
-    await Printing.layoutPdf(onLayout: (format) {
-      return pdf.save();
-    });
-  }
 
   Future<List<DocumentSnapshot>> getAllPatientData() async{
 
@@ -91,14 +62,7 @@ class _WebsiteState extends State<Website> {
                   ],
                 ),
                 onPressed: () async {
-                  Printing.layoutPdf(
-                    // [onLayout] will be called multiple times
-                    // when the user changes the printer or printer settings
-                    onLayout: (PdfPageFormat format) {
-                      // Any valid Pdf document can be returned here as a list of int
-                      return PdfGeneration().buildPdf(format);
-                    },
-                  );
+
                 },
               ),
       

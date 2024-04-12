@@ -36,6 +36,9 @@ class PatientData{
   static String height = "height";
   static String month = "month";
   static String weightHeightForMonth = "weight_height_for_month";
+  static String heightForAge = "height_for_age_category";
+  static String weightForAge = "weight_for_age_category";
+  static String weightForHeight = "weight_for_height_category";
 
   ///wording
   //child details
@@ -71,6 +74,9 @@ class PatientData{
   static String currentHeightWord = "current height";
   static String activityStatusWord = "activity status";
   static String caloriePerDayWord = "calorie per day";
+  static String heightForAgeWord = "Height for age category";
+  static String weightForAgeWord = "Weight for age category";
+  static String weightForHeightWord = "Weight for height category";
 
 
   static List<String> childdetail = [
@@ -113,6 +119,127 @@ class PatientData{
     //nutrition status
     birthWeightWord,
     birthHeightWord,
+    currentWeightWord,
+    currentHeightWord,
+    caloriePerDayWord,
+    activityStatusWord,
+    heightForAgeWord,
+    weightForAgeWord,
+    weightForHeightWord
+
+
+  ];
+
+  static List<String> childWordingOneChildPDF =[
+    //child details
+    nameWord,
+    //contactNumberWord,
+    dateOfBirthWord,
+    //addressWord,
+    ethincityWord,
+    relationshipWord,
+    schoolgoingWord,
+    areatypeWord,
+    genderWord,
+
+    //family status
+    personsInHomeWord,
+    guardianWord,
+    maritalStateWord,
+    childrenWord,
+    headOfHouseWord,
+    numMembersOverseasWord,
+    numMembersEarningWord,
+    incomeWord,
+    expenseWord,
+    homeConditionWord,
+    vehicleTypeWord,
+    smartphoneUsingWord,
+
+    //nutrition status
+    birthWeightWord,
+    birthHeightWord,
+    currentWeightWord,
+    currentHeightWord,
+    caloriePerDayWord,
+    activityStatusWord,
+    heightForAgeWord,
+    weightForAgeWord,
+    weightForHeightWord
+
+
+  ];
+
+   static List<String> childWordingWithoutArea =[
+    //child details
+    nameWord,
+    contactNumberWord,
+    dateOfBirthWord,
+    addressWord,
+    ethincityWord,
+    relationshipWord,
+    schoolgoingWord,
+    genderWord,
+
+    //family status
+    personsInHomeWord,
+    guardianWord,
+    maritalStateWord,
+    childrenWord,
+    headOfHouseWord,
+    numMembersOverseasWord,
+    numMembersEarningWord,
+    incomeWord,
+    expenseWord,
+    homeConditionWord,
+    vehicleTypeWord,
+    smartphoneUsingWord,
+
+    //nutrition status
+     birthWeightWord,
+     birthHeightWord,
+     currentWeightWord,
+     currentHeightWord,
+     caloriePerDayWord,
+     activityStatusWord,
+     heightForAgeWord,
+     weightForAgeWord,
+     weightForHeightWord
+
+
+  ];
+
+  
+  static List<String> childWordingpdf =[
+    //child details
+    nameWord,
+    //dateOfBirthWord,
+    //addressWord,
+    areatypeWord,
+    genderWord,
+
+    //nutrition status
+    //birthWeightWord,
+    //birthHeightWord,
+    currentWeightWord,
+    currentHeightWord,
+    caloriePerDayWord,
+    activityStatusWord
+
+
+  ];
+
+
+  static List<String> childWordingpdfWithoutArea =[
+    //child details
+    nameWord,
+    //dateOfBirthWord,
+    //addressWord,
+    genderWord,
+
+    //nutrition status
+    //birthWeightWord,
+    //birthHeightWord,
     currentWeightWord,
     currentHeightWord,
     caloriePerDayWord,

@@ -6,8 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:medicalapp1/class/WeightHeight.dart';
 import 'package:medicalapp1/local/LocalImageSave.dart';
 import 'package:open_file_plus/open_file_plus.dart';
+import 'package:pdf/pdf.dart';
+import 'package:printing/printing.dart';
 import '../components/MyAppBarHome.dart';
 import '../generateDocuments/ExcelGeneration.dart';
+import '../generateDocuments/PdfGeneration.dart';
 import '../properties/Appcolor.dart';
 import 'ShowData.dart';
 
@@ -64,11 +67,12 @@ class _ShowAllPatientState extends State<ShowAllPatient> with SingleTickerProvid
         _counter[0] = query.docs.length;
         break;
     }
-    print("**"+_counter.toString());
+    //print("**"+_counter.toString());
 
 
 
     return query.docs;
+    //return List.empty();
 
   }
 
@@ -149,8 +153,9 @@ class _ShowAllPatientState extends State<ShowAllPatient> with SingleTickerProvid
 
   @override
   void dispose() {
-    _tabController.dispose();
     super.dispose();
+    _tabController.dispose();
+
   }
 
 
@@ -187,10 +192,26 @@ class _ShowAllPatientState extends State<ShowAllPatient> with SingleTickerProvid
             PopupMenuButton(
               onSelected: (value) async {
                 if (value == 'pdf') {
+                  List<DocumentSnapshot> DocumentList= await getAllPatientData(Catogorytabs[currentindex]);
+                  Printing.layoutPdf(
+                    // [onLayout] will be called multiple times
+                    // when the user changes the printer or printer settings
+                    onLayout: (PdfPageFormat format) {
+                      // Any valid Pdf document can be returned here as a list of int
+                      return PdfGeneration().createPdfTypeChild(format,DocumentList,Catogorytabs[currentindex]);
+                    },
+                  );
 
                 } else if (value == 'excel') {
                   List<DocumentSnapshot> DocumentList= await getAllPatientData(Catogorytabs[currentindex]);
-                  String filePath=await ExcelGeneration().createExcelSheetAllchild(DocumentList);
+                  String filePath ="";
+                  if(currentindex==0){
+                    filePath =await ExcelGeneration().createExcelSheetAllchild(DocumentList);
+                  }else{
+                    filePath =await ExcelGeneration().createExcelSheetAreatypechild(Catogorytabs[currentindex],DocumentList);
+
+                  }
+
                   print(filePath);
                   // Handle PDF generation
                   _showSnackBar(context,"Generating Excelsheet",Colors.green);
@@ -210,8 +231,8 @@ class _ShowAllPatientState extends State<ShowAllPatient> with SingleTickerProvid
                   child: Row(
                     children: [
                       Icon(
-                        Icons.picture_as_pdf,
-                        color: Colors.blue, // Change the color here
+                        Icons.picture_as_pdf_outlined,
+                        color: Colors.red, // Change the color here
                       ),
                       SizedBox(width: 8), // Add spacing between icon and text
                       Text('Generate PDF'),
@@ -251,7 +272,7 @@ class _ShowAllPatientState extends State<ShowAllPatient> with SingleTickerProvid
           ),
         ),
         body: TabBarView(
-
+          controller: _tabController,
           children: [
             builderPatients("All"),
             builderPatients("State"),
