@@ -184,16 +184,16 @@ The application leverages Firebase Firestore as a NoSQL database to securely sto
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/username/child-malnutrition-management.git
+   git clone https://github.com/sajitheranda/medical_data_collector.git
 
 2. Navigate to the Project Directory Change into the project directory:
    ```bash
-   cd child-malnutrition-management
+   cd medical_data_collector
    
 3. Install Dependencies
    ```bash
    flutter pub get
 
 4. Run the Application
-  ```bash
+   ```bash
    flutter run
