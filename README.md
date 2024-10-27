@@ -19,7 +19,7 @@ The Child Malnutrition Management Application is a mobile tool specifically desi
   - [Document Generation](#document-generation)
 - [Data Security & Storage](#data-security--storage)
 - [Installation & Setup](#installation--setup)
-- [License](#license)
+- [Documentation](#documentation)
 
 ---
 
@@ -197,3 +197,14 @@ The application leverages Firebase Firestore as a NoSQL database to securely sto
 4. Run the Application
    ```bash
    flutter run
+
+---
+
+## Documentation
+
+Comprehensive documentation for the Child Malnutrition Management Application can be found in the following PDF files:
+
+- [Technical Documentation](https://github.com/username/child-malnutrition-management/docs/technical_documentation.pdf): In-depth technical specifications and architectural details of the application for developers and contributors.
+- [Healthcare Documentation](https://github.com/username/child-malnutrition-management/docs/api_documentation.pdf): Information on the API endpoints used within the application, including request/response formats and example calls.
+
+Feel free to download the PDFs and refer to them for more detailed instructions and information on the application.
