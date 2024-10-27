@@ -64,7 +64,7 @@ This page is designed to facilitate comprehensive data entry, with sections for 
 
 | ![Adding Patient Data Form](https://github.com/user-attachments/assets/e066482f-c160-48ba-aeeb-c324913d82f4) | ![Editing Patient Data](https://github.com/user-attachments/assets/a2c528e6-b84b-4810-b19b-558e6e7971f0) | ![Deleting Patient Data](https://github.com/user-attachments/assets/115206cd-3419-4883-b34e-cda6104f2d65) |
 |:--:|:--:|:--:|
-| Adding Patient Data Form | Editing Patient Data | Deleting Patient Data |
+| Figure 3: Add child details | Figure 4: Add fanily status | Figure 5: Add Nutrition details |
 
 
 
