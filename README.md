@@ -81,7 +81,7 @@ The patient data view page provides an organized and efficient way to access and
 
 | ![Children Details](https://github.com/user-attachments/assets/c64f573c-2f33-44f9-8259-1ac9417db927) | ![Generate PDF & Excel](https://github.com/user-attachments/assets/d474ec2a-ee30-4e8c-b960-e078754bf293) | ![View Child Details](https://github.com/user-attachments/assets/9ae79777-935a-4472-9a3c-8ecd1547662f) |
 |:--:|:--:|:--:|
-| Children Details | Generate PDF & Excel | View Child Details |
+| Figure 6: View All Children Details | Figure 7: Generate PDF & Excel |  Figure 8: View one Child Details |
 
 - **All Patients**: This section displays a complete list of all patient records, allowing users to quickly scan through the entire database.
 - **Urban Patients**: Filtered specifically for patients residing in urban areas, this section helps focus on demographics pertinent to urban health initiatives.
