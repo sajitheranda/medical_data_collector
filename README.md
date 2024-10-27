@@ -161,8 +161,16 @@ Generate PDF and Excel reports to streamline data sharing and record-keeping.
 
 ## Data Security & Storage
 
-All data is securely stored in Firebase Firestore, offering real-time access and synchronization across devices. Offline data entry and automatic syncing ensure data is reliably captured and updated without data loss, even when internet connectivity is limited.
+The application leverages Firebase Firestore as a NoSQL database to securely store and manage patient data. Firestore’s real-time data synchronization capabilities allow for instant updates across all devices, ensuring users always have access to the most current information. 
 
+### Offline Support & Data Synchronization
+The app is designed with offline capabilities, allowing data to be entered, modified, or deleted without an active internet connection. Once connectivity is restored, all offline actions are seamlessly synchronized with Firestore, ensuring data integrity without any risk of data loss.
+
+### Authentication & Access Control
+User authentication is implemented to secure the login process, only allowing authorized users to access patient data. Firebase Authentication is used to manage login credentials, making it harder for unauthorized users to gain access to sensitive data. 
+
+### Data Deletion Handling
+For additional security, when a user deletes patient data, it is soft-deleted — removed from view but stored securely. This design mitigates potential accidental deletion and protects against malicious data attacks. This layer of data security enhances data protection and ensures compliance with best practices for secure data management.
 ---
 
 ## Installation & Setup
