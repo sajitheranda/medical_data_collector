@@ -32,6 +32,8 @@ This application allows PHMs to collect and analyze critical health and demograp
 ### Login Page
 The login screen is a secure entry point for users, requiring credentials to access the app's main functionalities. The design prioritizes ease of use and security.
 
+![page1_login](https://github.com/user-attachments/assets/337171e7-9618-432e-aa3a-b71c20f679f8)
+
 - **Username and Password Fields**: Clearly labeled input fields make logging in intuitive.
 - **Secure Authentication**: User credentials are encrypted and securely transmitted, protecting sensitive data.
 - **Error Handling**: Immediate feedback for invalid login attempts helps users correct issues easily.
