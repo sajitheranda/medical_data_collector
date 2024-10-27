@@ -97,25 +97,6 @@ All data is securely stored in Firebase Firestore, offering real-time access and
 
 ---
 
-## Screenshots
-
-- **Login Page**  
-  ![Figure 1 - Login Page](screenshots/login.png)
-  
-- **Main Page**  
-  ![Figure 2 - Main Page](screenshots/main.png)
-
-- **Family Status Page**  
-  ![Figure 3 - Family Status](screenshots/family_status.png)
-
-- **Patient Data Entry**  
-  ![Figure 4 - Child Details](screenshots/child_details.png)
-
-- **Collection Status Dashboard**  
-  ![Figure 11 - Collection Status](screenshots/collection_status.png)
-
----
-
 ## Installation & Setup
 
 1. **Clone the Repository**
