@@ -35,7 +35,7 @@ The login screen is a secure entry point for users, requiring credentials to acc
 <p align="left">
     <img src="https://github.com/user-attachments/assets/337171e7-9618-432e-aa3a-b71c20f679f8" alt="login page" width="300"/>
    <br>
-   <strong>Figure 1:</strong>Login page
+   <strong>Figure 1: </strong>Login page
 </p>
 
 - **Username and Password Fields**: Clearly labeled input fields make logging in intuitive.
@@ -49,7 +49,7 @@ The main page serves as the app's control center, providing PHMs with quick acce
 <p align="left">
    <img src="https://github.com/user-attachments/assets/88e62b5c-c466-44f7-bb05-62ddf7866725" alt="Main page" width="300"/>
    <br>
-   <strong>Figure 2:</strong>Main page
+   <strong>Figure 2: </strong>Main page
 </p>
 
 - **Add New Patient**: PHMs can directly input data for new patients, filling out structured fields for demographics, nutritional status, and clinical records.
