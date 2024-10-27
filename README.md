@@ -10,6 +10,9 @@ The Child Malnutrition Management Application is a mobile tool specifically desi
   - [Login Page](#login-page)
   - [Main Page](#main-page)
   - [Adding Patient Data](#adding-patient-data)
+  - [Viewing Patient Data](#viewing-patient-data)
+  - [Editing Patient Data](#editing-patient-data)
+  - [Deleting Patient Data](#deleting-patient-data)
   - [Weight and Height Data Management](#weight-and-height-data-management)
   - [Graph Generation](#graph-generation)
   - [Collection Status Dashboard](#collection-status-dashboard)
@@ -66,6 +69,13 @@ This page is designed to facilitate comprehensive data entry, with sections for 
   - **Image Upload**: Attach images to add visual context to the data.
   - **Toggle Buttons & Dropdowns**: Easy-to-use options for binary choices and categorical data.
   - **Date Picker**: Calendar selection for accurate date inputs.
+
+### Viewing Patient Data
+The patient data view page provides an organized and efficient way to access and manage patient records. The data is categorized into three distinct sections for easier navigation:
+- **All Patients**: This section displays a complete list of all patient records, allowing users to quickly scan through the entire database.
+- **Urban Patients**: Filtered specifically for patients residing in urban areas, this section helps focus on demographics pertinent to urban health initiatives.
+- **State Patients**: This category includes patients grouped by specific states, enabling users to analyze data based on geographical distribution.
+- **Pagination**: Navigate through large datasets with pagination controls, improving the user experience when dealing with extensive records.
 
 ### Editing Patient Data
 Users can edit existing patient records to ensure that the information remains current and accurate. This includes:
