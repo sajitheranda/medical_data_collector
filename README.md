@@ -67,6 +67,16 @@ This page is designed to facilitate comprehensive data entry, with sections for 
   - **Toggle Buttons & Dropdowns**: Easy-to-use options for binary choices and categorical data.
   - **Date Picker**: Calendar selection for accurate date inputs.
 
+### Editing Patient Data
+Users can edit existing patient records to ensure that the information remains current and accurate. This includes:
+- **Direct Editing**: Clickable fields that allow users to modify information directly within the patient profile.
+- **Validation**: Ensures that all required fields are filled out and that the data adheres to specific formats before submission.
+
+### Deleting Patient Data
+To maintain an organized database, users have the option to delete patient records:
+- **Confirmation Prompt**: A confirmation dialog to prevent accidental deletions.
+- **Permanent Removal**: Deleted data is permanently removed from the system, ensuring that the database remains accurate and up-to-date.
+
 ### Weight and Height Data Management
 This section enables PHMs to record and manage anthropometric data, crucial for monitoring children’s growth.
 
