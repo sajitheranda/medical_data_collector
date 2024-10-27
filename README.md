@@ -90,6 +90,11 @@ The patient data view page provides an organized and efficient way to access and
 
 ### Editing Patient Data
 Users can edit existing patient records to ensure that the information remains current and accurate. This includes:
+
+| ![Edit Child Details 1](https://github.com/user-attachments/assets/90cb8c26-c18f-42eb-af7b-a56dd9a52a73) | ![Edit Child Details 2](https://github.com/user-attachments/assets/eaf94df3-6770-4cb6-9f20-caf0bad611af) |
+|:--:|:--:|
+| Figure 9: Edit and Save Child Details | Figure 10: Edit Child Details |
+
 - **Direct Editing**: Clickable fields that allow users to modify information directly within the patient profile.
 - **Validation**: Ensures that all required fields are filled out and that the data adheres to specific formats before submission.
 
