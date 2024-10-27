@@ -63,9 +63,9 @@ The main page serves as the app's control center, providing PHMs with quick acce
 This page is designed to facilitate comprehensive data entry, with sections for child, family, and nutritional status information.
 
 <div style="display: flex; justify-content: space-around;">
-    <img src="https://github.com/user-attachments/assets/e066482f-c160-48ba-aeeb-c324913d82f4" alt="adding image 1" width="300" />
-    <img src="https://github.com/user-attachments/assets/a2c528e6-b84b-4810-b19b-558e6e7971f0" alt="adding image 2" width="300" />
-    <img src="https://github.com/user-attachments/assets/115206cd-3419-4883-b34e-cda6104f2d65" alt="adding image 3" width="300" />
+    <img src="https://github.com/user-attachments/assets/e066482f-c160-48ba-aeeb-c324913d82f4" alt="adding image 1" width="300" style="padding: 20;" />
+    <img src="https://github.com/user-attachments/assets/a2c528e6-b84b-4810-b19b-558e6e7971f0" alt="adding image 2" width="300" style="padding: 20;" />
+    <img src="https://github.com/user-attachments/assets/115206cd-3419-4883-b34e-cda6104f2d65" alt="adding image 3" width="300" style="padding: 20;" />
 </div>
 
 - **Child Details**: Capture essential information, including the child’s name, date of birth, address, ethnicity, school status, area type, and gender.
