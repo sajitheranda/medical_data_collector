@@ -93,6 +93,11 @@ Users can edit existing patient records to ensure that the information remains c
 
 ### Deleting Patient Data
 To maintain an organized database, users have the option to delete patient records:
+
+| <img src="https://github.com/user-attachments/assets/a4fee9fe-e96f-4583-8655-dfb3260b5159" alt="Delete Child Details" width="300" /> |
+|:--:|
+| **Figure X:** Delete Child Details |
+
 - **Confirmation Prompt**: A confirmation dialog to prevent accidental deletions.
 - **Permanent Removal**: Deleted data is permanently removed from the system, ensuring that the database remains accurate and up-to-date.
 
