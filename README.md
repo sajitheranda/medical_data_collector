@@ -1,103 +1,123 @@
 # Child Malnutrition Management Application
 
-A mobile application designed to streamline data collection, management, and analysis for child malnutrition. Tailored for Public Health Midwives (PHMs), the app enhances efficiency and accuracy, aiding in informed decision-making and targeted interventions.
+The Child Malnutrition Management Application is a mobile tool specifically designed for Public Health Midwives (PHMs). Its purpose is to simplify the collection, management, and analysis of child malnutrition data, thereby improving efficiency and accuracy in fieldwork. By centralizing and securing data entry processes, the application supports informed decisions and targeted interventions in child health and nutrition.
+
+---
 
 ## Table of Contents
-- [Features Overview](#features-overview)
+- [Overview](#overview)
+- [Features](#features)
+  - [Login Page](#login-page)
+  - [Main Page](#main-page)
+  - [Adding Patient Data](#adding-patient-data)
+  - [Weight and Height Data Management](#weight-and-height-data-management)
+  - [Graph Generation](#graph-generation)
+  - [Collection Status Dashboard](#collection-status-dashboard)
+  - [Document Generation](#document-generation)
 - [Data Security & Storage](#data-security--storage)
 - [Screenshots](#screenshots)
 - [Installation & Setup](#installation--setup)
 - [License](#license)
 
-## Features Overview
+---
+
+## Overview
+
+This application allows PHMs to collect and analyze critical health and demographic data in their communities, focusing on child malnutrition. With a simple, user-friendly interface, it offers features that streamline patient data entry, tracking, and reporting, while maintaining high standards of data security. All data is stored and managed in Firebase Firestore, ensuring reliability and easy access.
+
+---
+
+## Features
 
 ### Login Page
-The login page ensures secure access with fields for username, password, and an optional "Remember Me" feature.
+The login screen is a secure entry point for users, requiring credentials to access the app's main functionalities. The design prioritizes ease of use and security.
 
-- **User Authentication**
-  - Simple, labeled fields for credentials
-  - Secure authentication protocols for data protection
-- **Error Handling**
-  - Instant feedback for invalid login attempts
-  - Clear error messages for user assistance
-- **Responsive Design**
-  - Optimized for multiple screen sizes and accessible design elements
+- **Username and Password Fields**: Clearly labeled input fields make logging in intuitive.
+- **Secure Authentication**: User credentials are encrypted and securely transmitted, protecting sensitive data.
+- **Error Handling**: Immediate feedback for invalid login attempts helps users correct issues easily.
+- **Responsive and Accessible Design**: The layout adapts to different screen sizes and includes accessibility features like large buttons and clear text.
 
 ### Main Page
-Central hub for interactions, offering three primary options to support PHMs in managing child malnutrition data.
+The main page serves as the app's control center, providing PHMs with quick access to essential features.
 
-- **Add New Patient**
-  - Input structured data for each patient
-- **Show Patients**
-  - Access database for detailed profiles and historical data
-- **Collection Status**
-  - Overview of data collection progress and metrics
+- **Add New Patient**: PHMs can directly input data for new patients, filling out structured fields for demographics, nutritional status, and clinical records.
+- **Show Patients**: This section provides a searchable database where PHMs can access patient profiles, including historical data and growth trends.
+- **Collection Status**: A dashboard view offers an overview of data collection progress, showing key metrics to help track completion and consistency.
 
-### Adding Patient Data Page
-Enables PHMs to enter comprehensive data on children, their families, and nutritional statuses.
+### Adding Patient Data
+This page is designed to facilitate comprehensive data entry, with sections for child, family, and nutritional status information.
 
-- **Sections:**
-  - **Child Details:** Name, contact info, date of birth, etc.
-  - **Family Status:** Household composition, income, and other socio-economic factors
-  - **Nutritional Status:** Birth/current weight and height, calorie intake, growth metrics
-- **Additional Features:**
-  - Image upload for visual context
-  - Toggle buttons, dropdowns, and date pickers for efficient data entry
+- **Child Details**: Capture essential information, including the child’s name, date of birth, address, ethnicity, school status, area type, and gender.
+- **Family Status**: Record family composition, income, and socio-economic indicators such as vehicle ownership and smartphone usage.
+- **Nutritional Status**: Track birth weight/height, current weight/height, activity level, calorie intake, and growth measurements over time.
+- **Advanced Input Options**:
+  - **Image Upload**: Attach images to add visual context to the data.
+  - **Toggle Buttons & Dropdowns**: Easy-to-use options for binary choices and categorical data.
+  - **Date Picker**: Calendar selection for accurate date inputs.
 
 ### Weight and Height Data Management
-A section dedicated to tracking children’s growth, allowing PHMs to maintain accurate and current records.
+This section enables PHMs to record and manage anthropometric data, crucial for monitoring children’s growth.
 
-- **Key Features:**
-  - Data entry for weight/height with real-time validation
-  - Update/edit options for existing records
-  - Secure storage in Firebase Firestore with offline support
+- **Data Entry**: Capture and validate weight/height entries to ensure accuracy.
+- **Edit Existing Data**: Modify records to keep data current and correct errors.
+- **Delete Data**: Remove outdated or incorrect entries with confirmation prompts to prevent accidental loss.
+- **Secure Data Storage**: Data is stored in Firestore, accessible in real-time and protected for security.
 
-### Graph Generation Page
-Visualizes growth patterns through various interactive graphs.
+### Graph Generation
+The graph generation page provides visual tools to analyze growth trends over time.
 
-- **Growth Tracking:**
-  - Height vs. Age, Weight vs. Age, and Weight vs. Height graphs
-- **Interactive Visualization:**
-  - Zoom/pan capabilities for detailed data analysis
-  - Filter options to focus on specific growth phases
+- **Height vs. Age and Weight vs. Age Graphs**: Track growth patterns against standardized metrics.
+- **Weight vs. Height Graph**: Assess body proportions to monitor healthy development.
+- **Interactive Visualization**:
+  - **Zoom and Pan**: Enables detailed examination of specific data points.
+  - **Dynamic Updates**: Automatically updates graphs as new data is added.
+- **Customizable Views**: Filter by time periods or age groups for focused analysis.
 
 ### Collection Status Dashboard
-Provides a visual overview of the collected data, aiding PHMs in assessing community nutritional and health statuses.
+A comprehensive dashboard offers a high-level view of key demographic and nutritional indicators.
 
-- **Dashboard Charts:**
-  - Gender and Area Type Distribution Donut Charts
-  - Activity Status and Vehicle Type Bar Charts
-  - Total Patients Count for an overall snapshot
+- **Gender and Area Distribution Charts**: Donut charts show gender ratio and urban/estate demographics.
+- **Activity Status Bar Chart**: Visualize the distribution of engagement levels among patients.
+- **Total Patient Count**: Summarizes the total number of tracked patients for an immediate overview.
+- **Vehicle Ownership Chart**: Provides insights into socio-economic conditions based on household vehicle types.
 
 ### Document Generation
-Generates detailed reports in PDF and Excel formats, useful for both individual patient records and aggregated data.
+Generate PDF and Excel reports to streamline data sharing and record-keeping.
 
-- **Reports:**
-  - Individual and aggregated PDF/Excel documents
-  - Flexible for reporting, analysis, and record-keeping
+- **Individual and Aggregated Reports**:
+  - **PDF for Single Patient**: Generate detailed reports for individual patients.
+  - **PDF for All Patients**: Create an overview of the entire patient dataset.
+  - **Excel Exports**: Flexible for data analysis and sharing, available for both single and all patients.
 
 ---
 
 ## Data Security & Storage
 
-Data is securely stored in Firebase Firestore, supporting real-time updates, offline data entry, and automatic syncing.
+All data is securely stored in Firebase Firestore, offering real-time access and synchronization across devices. Offline data entry and automatic syncing ensure data is reliably captured and updated without data loss, even when internet connectivity is limited.
 
 ---
 
 ## Screenshots
 
-- **Login Page:** ![Figure 1 - Login Page]
-- **Main Page:** ![Figure 2 - Main Page]
-- **Family Status:** ![Figure 3 - Family Status]
-- **Patient Data Entry:** ![Figure 4 - Child Details]
-- **Collection Status Dashboard:** ![Figure 11 - Collection Status]
+- **Login Page**  
+  ![Figure 1 - Login Page](screenshots/login.png)
+  
+- **Main Page**  
+  ![Figure 2 - Main Page](screenshots/main.png)
+
+- **Family Status Page**  
+  ![Figure 3 - Family Status](screenshots/family_status.png)
+
+- **Patient Data Entry**  
+  ![Figure 4 - Child Details](screenshots/child_details.png)
+
+- **Collection Status Dashboard**  
+  ![Figure 11 - Collection Status](screenshots/collection_status.png)
 
 ---
 
 ## Installation & Setup
 
-1. Clone the repository
+1. **Clone the Repository**
    ```bash
    git clone https://github.com/username/child-malnutrition-management.git
-
-
