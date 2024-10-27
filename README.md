@@ -147,6 +147,11 @@ A comprehensive dashboard offers a high-level view of key demographic and nutrit
 ### Document Generation
 Generate PDF and Excel reports to streamline data sharing and record-keeping.
 
+| <img src="https://github.com/user-attachments/assets/dbed4fbf-b0d2-4df7-9239-36b8eb22b503" alt="Generated PDFs" width="300" /> | <img src="https://github.com/user-attachments/assets/9e36760d-3fa8-4bf6-8dd4-4097523092c0" alt="Generated Excel Sheet" width="300" /> | <img src="https://github.com/user-attachments/assets/22fd4d98-b1fe-41c8-8cdc-11a0d03d3d5b" alt="Generate PDF for One Child" width="300" /> |
+|:--:|:--:|:--:|
+| Figure 17:** Generated PDF By State  | Figure 18: Generated Excel Sheet By State | Figure 19: Generate PDF for One Child |
+
+
 - **Individual and Aggregated Reports**:
   - **PDF for Single Patient**: Generate detailed reports for individual patients.
   - **PDF for All Patients**: Create an overview of the entire patient dataset.
