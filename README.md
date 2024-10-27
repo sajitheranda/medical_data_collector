@@ -62,11 +62,9 @@ The main page serves as the app's control center, providing PHMs with quick acce
 ### Adding Patient Data
 This page is designed to facilitate comprehensive data entry, with sections for child, family, and nutritional status information.
 
-| ![Adding Patient Data Form](https://github.com/user-attachments/assets/e066482f-c160-48ba-aeeb-c324913d82f4) | ![Editing Patient Data](https://github.com/user-attachments/assets/a2c528e6-b84b-4810-b19b-558e6e7971f0) | ![Deleting Patient Data](https://github.com/user-attachments/assets/115206cd-3419-4883-b34e-cda6104f2d65) |
+| <img src="https://github.com/user-attachments/assets/e066482f-c160-48ba-aeeb-c324913d82f4" alt="Adding Patient Data Form" width="300" /> | <img src="https://github.com/user-attachments/assets/a2c528e6-b84b-4810-b19b-558e6e7971f0" alt="Editing Patient Data" width="300" /> | <img src="https://github.com/user-attachments/assets/115206cd-3419-4883-b34e-cda6104f2d65" alt="Deleting Patient Data" width="300" /> |
 |:--:|:--:|:--:|
-| Figure 3: Add child details | Figure 4: Add fanily status | Figure 5: Add Nutrition details |
-
-
+| Figure 3: Add child details | Figure 4: Add family status | Figure 5: Add nutrition details |
 
 - **Child Details**: Capture essential information, including the child’s name, date of birth, address, ethnicity, school status, area type, and gender.
 - **Family Status**: Record family composition, income, and socio-economic indicators such as vehicle ownership and smartphone usage.
@@ -79,9 +77,9 @@ This page is designed to facilitate comprehensive data entry, with sections for 
 ### Viewing Patient Data
 The patient data view page provides an organized and efficient way to access and manage patient records. The data is categorized into three distinct sections for easier navigation:
 
-| ![Children Details](https://github.com/user-attachments/assets/c64f573c-2f33-44f9-8259-1ac9417db927) | ![Generate PDF & Excel](https://github.com/user-attachments/assets/d474ec2a-ee30-4e8c-b960-e078754bf293) | ![View Child Details](https://github.com/user-attachments/assets/9ae79777-935a-4472-9a3c-8ecd1547662f) |
+| <img src="https://github.com/user-attachments/assets/c64f573c-2f33-44f9-8259-1ac9417db927" alt="Children Details" width="300" /> | <img src="https://github.com/user-attachments/assets/d474ec2a-ee30-4e8c-b960-e078754bf293" alt="Generate PDF & Excel" width="300" /> | <img src="https://github.com/user-attachments/assets/9ae79777-935a-4472-9a3c-8ecd1547662f" alt="View Child Details" width="300" /> |
 |:--:|:--:|:--:|
-| Figure 6: View All Children Details | Figure 7: Generate PDF & Excel |  Figure 8: View one Child Details |
+| Figure 6: View All Children Details | Figure 7: Generate PDF & Excel | Figure 8: View One Child Details |
 
 - **All Patients**: This section displays a complete list of all patient records, allowing users to quickly scan through the entire database.
 - **Urban Patients**: Filtered specifically for patients residing in urban areas, this section helps focus on demographics pertinent to urban health initiatives.
