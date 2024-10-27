@@ -32,7 +32,7 @@ This application allows PHMs to collect and analyze critical health and demograp
 ### Login Page
 The login screen is a secure entry point for users, requiring credentials to access the app's main functionalities. The design prioritizes ease of use and security.
 
-<img src="https://github.com/user-attachments/assets/337171e7-9618-432e-aa3a-b71c20f679f8" alt="page1_login" width="300"/>
+<img src="https://github.com/user-attachments/assets/337171e7-9618-432e-aa3a-b71c20f679f8" alt="login page" width="300"/>
 
 - **Username and Password Fields**: Clearly labeled input fields make logging in intuitive.
 - **Secure Authentication**: User credentials are encrypted and securely transmitted, protecting sensitive data.
@@ -41,6 +41,8 @@ The login screen is a secure entry point for users, requiring credentials to acc
 
 ### Main Page
 The main page serves as the app's control center, providing PHMs with quick access to essential features.
+
+<img src="https://github.com/user-attachments/assets/88e62b5c-c466-44f7-bb05-62ddf7866725" alt="main page" width="300"/>
 
 - **Add New Patient**: PHMs can directly input data for new patients, filling out structured fields for demographics, nutritional status, and clinical records.
 - **Show Patients**: This section provides a searchable database where PHMs can access patient profiles, including historical data and growth trends.
