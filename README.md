@@ -18,7 +18,6 @@ The Child Malnutrition Management Application is a mobile tool specifically desi
   - [Collection Status Dashboard](#collection-status-dashboard)
   - [Document Generation](#document-generation)
 - [Data Security & Storage](#data-security--storage)
-- [Screenshots](#screenshots)
 - [Installation & Setup](#installation--setup)
 - [License](#license)
 
