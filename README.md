@@ -123,7 +123,7 @@ The graph generation page provides visual tools to analyze growth trends over ti
 
 | <img src="https://github.com/user-attachments/assets/baa7120b-06c4-494e-a0e5-579da4851047" alt="Generate Graphs" width="300" /> |
 |:--:|
-| **Figure 13:** Generate Graphs |
+| Figure 14: Generate Graphs Of Weight Heights |
 
 - **Height vs. Age and Weight vs. Age Graphs**: Track growth patterns against standardized metrics.
 - **Weight vs. Height Graph**: Assess body proportions to monitor healthy development.
@@ -134,6 +134,10 @@ The graph generation page provides visual tools to analyze growth trends over ti
 
 ### Collection Status Dashboard
 A comprehensive dashboard offers a high-level view of key demographic and nutritional indicators.
+
+| <img src="https://github.com/user-attachments/assets/7dde10ab-4882-4914-9b59-79c2be06f28d" alt="Show Statistics 2" width="300" /> | <img src="https://github.com/user-attachments/assets/7a368d7a-d1fc-49a4-9f35-4efa9e7949c7" alt="Show Statistics 1" width="300" /> |
+|:--:|:--:|
+| Figure 15: Show Collection status Area | Figure 16: Show Collection status Guardian |
 
 - **Gender and Area Distribution Charts**: Donut charts show gender ratio and urban/estate demographics.
 - **Activity Status Bar Chart**: Visualize the distribution of engagement levels among patients.
