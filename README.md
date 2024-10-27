@@ -121,6 +121,9 @@ This section enables PHMs to record and manage anthropometric data, crucial for 
 ### Graph Generation
 The graph generation page provides visual tools to analyze growth trends over time.
 
+| <img src="https://github.com/user-attachments/assets/baa7120b-06c4-494e-a0e5-579da4851047" alt="Generate Graphs" width="300" /> |
+| **Figure 13:** Generate Graphs |
+
 - **Height vs. Age and Weight vs. Age Graphs**: Track growth patterns against standardized metrics.
 - **Weight vs. Height Graph**: Assess body proportions to monitor healthy development.
 - **Interactive Visualization**:
