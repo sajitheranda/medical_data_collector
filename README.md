@@ -42,7 +42,11 @@ The login screen is a secure entry point for users, requiring credentials to acc
 ### Main Page
 The main page serves as the app's control center, providing PHMs with quick access to essential features.
 
-<img src="https://github.com/user-attachments/assets/88e62b5c-c466-44f7-bb05-62ddf7866725" alt="main page" width="300"/>
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/88e62b5c-c466-44f7-bb05-62ddf7866725" alt="Figure Description" width="300"/>
+   <br>
+   <strong>Figure 1:</strong> Your figure caption goes here.
+</p>
 
 - **Add New Patient**: PHMs can directly input data for new patients, filling out structured fields for demographics, nutritional status, and clinical records.
 - **Show Patients**: This section provides a searchable database where PHMs can access patient profiles, including historical data and growth trends.
