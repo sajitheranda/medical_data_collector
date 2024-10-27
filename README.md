@@ -96,7 +96,7 @@ To maintain an organized database, users have the option to delete patient recor
 
 | <img src="https://github.com/user-attachments/assets/a4fee9fe-e96f-4583-8655-dfb3260b5159" alt="Delete Child Details" width="300" /> |
 |:--:|
-| **Figure X:** Delete Child Details |
+| Figure 10: Delete Child Details |
 
 - **Confirmation Prompt**: A confirmation dialog to prevent accidental deletions.
 - **Permanent Removal**: Deleted data is permanently removed from the system, ensuring that the database remains accurate and up-to-date.
@@ -106,10 +106,12 @@ This section enables PHMs to record and manage anthropometric data, crucial for 
 
 | <img src="https://github.com/user-attachments/assets/0462746e-6e92-475c-b9e8-ed326c16b7a3" alt="Save Weight Height" width="300" /> | <img src="https://github.com/user-attachments/assets/726e01df-1244-45b2-baf2-b63efdb6d3fc" alt="Add Weight Height" width="300" /> |
 |:--:|:--:|
-| **Figure 9:** Save Weight & Height | **Figure 10:** Add Weight & Height |
+| Figure 11: View Weight & Height | Figure 12: Add Weight & Height |
 
 | <img src="https://github.com/user-attachments/assets/e32ec02b-9922-4ce4-ada8-d8a92f29b29d" alt="Edit Weight Height" width="300" /> | <img src="https://github.com/user-attachments/assets/c5f17c2b-45e9-4d41-9cd7-df96e24fd08d" alt="Delete Weight Height" width="300" /> |
-| **Figure 11:** Edit Weight & Height | **Figure 12:** Delete Weight & Height |
+|:--:|:--:|
+| Figure 13: Edit Weight & Height | Figure 14: Delete Weight & Height |
+
 
 - **Data Entry**: Capture and validate weight/height entries to ensure accuracy.
 - **Edit Existing Data**: Modify records to keep data current and correct errors.
