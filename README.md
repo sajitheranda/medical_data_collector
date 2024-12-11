@@ -205,6 +205,6 @@ The application leverages Firebase Firestore as a NoSQL database to securely sto
 Comprehensive documentation for the Child Malnutrition Management Application can be found in the following PDF files:
 
 - [Technical Documentation 📄](https://github.com/user-attachments/files/17535215/Technical.Documentation-Comparison.of.proteine.energy.malnutrition.pdf): In-depth technical specifications and architectural details of the application for developers and contributors.
-- [Healthcare Documentation 📄](https://github.com/user-attachments/files/17535214/HealthCare.Documentation-Comparison.of.proteine.energy.malnutrition.pdf): Detailed information regarding the medical principles, guidelines, and best practices behind the Child Malnutrition Management Application, including the rationale for design choices, patient care methodologies, and relevant health information.
+- [Healthcare Documentation 📄](https://github.com/user-attachments/files/18092595/HealthCare.Documentation.pdf): Detailed information regarding the medical principles, guidelines, and best practices behind the Child Malnutrition Management Application, including the rationale for design choices, patient care methodologies, and relevant health information.
 
 Feel free to download the PDFs and refer to them for more detailed instructions and information on the application.
